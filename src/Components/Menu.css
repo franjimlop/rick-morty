@@ -1,0 +1,29 @@
+   
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+.Cabecera{
+    border-bottom: 1px solid white;
+    margin-top: 1em;
+    padding: 2em;
+    background-color: white;
+    border-radius: 1em;
+    width: 99vw;
+}
+.Cabecera-h1{
+    padding: 0.5em;
+    margin: 0 1em;
+    font-size: 1.5em;
+    border-bottom: 2px solid grey;
+}
+.Cabecera-a{
+    text-decoration: none;
+    color: rgb(0, 181, 209);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.menu_header{
+    width: 100%;
+    align-items: end;
+
+}
