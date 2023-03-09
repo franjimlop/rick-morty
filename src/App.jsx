@@ -11,12 +11,16 @@ import './App.css';
 function App() {
   //API Rick & Morty
   let [numeroPagina, setNumeroPagina] = useState(1);
+  let [datosObtenidos, actualizarDatosObtenidos] = useState([]);
+  let {info , results} = datosObtenidos;
+  console.log(datosObtenidos);
+
   let api = `https://rickandmortyapi.com/api/character/?page=${numeroPagina}`;
 
   useEffect(()=>{
     (async function () {
-      let data = await fetch(api).then((res) => res.json());
-      console.log(data);
+      let datos = await fetch(api).then((res) => res.json());
+      actualizarDatosObtenidos(datos);
     })();
   },[api])
 
