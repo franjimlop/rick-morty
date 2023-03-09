@@ -1,11 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-import images from './img';
+import header from './img/header.png';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <img src={images.header} alt="Header"/> 
+      <div className="text-center mt-3">
+        <img src={header} alt="Header" style={{ width: "400px", height: "auto" }}/>
+      </div>
     </div>
   );
 }
