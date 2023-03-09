@@ -1,9 +1,9 @@
 import React from 'react'
 
-const paginacion = () => {
+const Paginacion = () => {
   return (
     <div>paginacion</div>
   )
 }
 
-export default paginacion
+export default Paginacion

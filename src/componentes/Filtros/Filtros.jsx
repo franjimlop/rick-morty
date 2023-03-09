@@ -1,9 +1,9 @@
 import React from 'react'
 
-const filtros = () => {
+const Filtros = () => {
   return (
     <div>filtros</div>
   )
 }
 
-export default filtros
+export default Filtros

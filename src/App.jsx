@@ -1,19 +1,29 @@
+import React, { useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-import Buscador from "./components/Buscador/Buscador";
-import Filtros from "./components/Filtros/Filtros";
-import Card from "./components/Card/Card";
-import Paginacion from "./components/Paginacion/Paginacion";
-import header from './img/header.png';
+import Buscador from "./componentes/Buscador/Buscador";
+import Filtros from "./componentes/Filtros/Filtros";
+import Card from "./componentes/Card/Card";
+import Paginacion from "./componentes/Paginacion/Paginacion";
+import Menu from './componentes/Menu/Menu';
 import './App.css';
 
 function App() {
+  //API Rick & Morty
+  let [numeroPagina, setNumeroPagina] = useState(1);
+  let api = `https://rickandmortyapi.com/api/character/?page=${numeroPagina}`;
+
+  useEffect(()=>{
+    (async function () {
+      let data = await fetch(api).then((res) => res.json());
+      console.log(data);
+    })();
+  },[api])
+
   return (
     <div className="App">
       {/* Imagen como Header */}
-      <div className="text-center mt-3">
-        <img src={header} alt="Header" style={{ width: "400px", height: "auto" }} />
-      </div>
+      <Menu/>
       <div className="container text-center">
         {/* Buscador */}
         <Buscador></Buscador>
@@ -21,10 +31,7 @@ function App() {
         <Filtros></Filtros>
         {/* Cards */}
         <div className="row">
-          <div className="col-3"><Card></Card></div>
-          <div className="col-3"><Card></Card></div>
-          <div className="col-3"><Card></Card></div>
-          <div className="col-3"><Card></Card></div>
+          <Card></Card>
         </div>
         {/* Paginar */}
         <Paginacion></Paginacion>
