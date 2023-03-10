@@ -1,0 +1,34 @@
+
+.card{
+    box-shadow: 0.5em 0.5em 1em rgb(107, 107, 107);
+    color: rgb(255, 255, 255);
+    background-color: rgba(99, 121, 110, 0.659);
+}
+.card-title{
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid rgb(200, 254, 255);
+    font-weight: bold;
+}
+.img-fluid{
+    box-shadow: 0 0 1em rgb(0, 208, 255);
+}
+
+.vivo{
+    background-color: green;
+}
+.muerto{
+    background-color: red;
+}
+.desconocido{
+    background-color: grey;
+}
+.estado{
+    border: solid rgb(255, 255, 255) 1px;
+    width: 100%;
+    color:white;
+    font-weight: bold;
+    border-radius: 0.5em;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}

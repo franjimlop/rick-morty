@@ -1,20 +1,8 @@
 
 body {
     background-color: greenyellow;
-}
-.card{
-    box-shadow: 1em 1em 1em ;
-}
-.img-fluid{
-    box-shadow: 0 0 1em greenyellow;
-}
-
-.vivo{
-    background-color: green;
-}
-.muerto{
-    background-color: red;
-}
-.desconocido{
-    background-color: grey;
+    background-image: url("./img/fondo.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
 }
