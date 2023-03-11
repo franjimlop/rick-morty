@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Card.css'
+import PropTypes from 'prop-types';
+
 const Card = ({results}) => {
   let mostrar;
-  let [classStatus,setClassStatus] = useState("desconocido");
   console.log(results);
   if(results){
     mostrar = results.map((personaje)=>{
@@ -29,9 +30,9 @@ const Card = ({results}) => {
           <div className="card p-3 border border-light mb-4">
               <p className={classStatus+" estado centrar"}>{status}</p>
             <img src={image} alt="" className='img-fluid rounded-start rounded border border-light'/>
-            <div class="card-body">
-              <h3 class="card-title">{name}</h3>
-              <h6 class="card-text">Ultima vez visto:</h6>
+            <div className="card-body">
+              <h3 className="card-title">{name}</h3>
+              <h6 className="card-text">Ultima vez visto:</h6>
               <p className="card-text">{location.name}</p>
               
             </div>
@@ -50,4 +51,9 @@ const Card = ({results}) => {
   )
 }
 
+// Definimos los tipos de datos de las props
+Card.propTypes = {
+  results: PropTypes.object.isRequired,
+};
+// valor por defecto de la prop no es obligatorio con el required
 export default Card;
