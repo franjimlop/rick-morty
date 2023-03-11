@@ -11,31 +11,43 @@ import './App.css';
 function App() {
   //API Rick & Morty
   let [numeroPagina, setNumeroPagina] = useState(1);
-  let [datosObtenidos, actualizarDatosObtenidos] = useState([]);
-  let {info , results} = datosObtenidos;
-  console.log(datosObtenidos);
+  let [datos_api, setDatos_api] = useState([]);
+  // esto sería la destructuracion del JSON, como se vio en clase hicimos lo mismo con los objetos
+  // poniendo el nombre del atributo del objeto saca su información
+  let {info, results} = datos_api;
 
   let api = `https://rickandmortyapi.com/api/character/?page=${numeroPagina}`;
-
-  useEffect(()=>{
+  
+  // console.log("datos_api= ",datos_api.info);
+  //console.log("info apti= ",results.info);
+  useEffect(() => {
+    //se crea la funcion asincrona de AJAX, pero ¿porqué los parentesis que envuelve la funcion?
     (async function () {
-      let datos = await fetch(api).then((res) => res.json());
-      actualizarDatosObtenidos(datos);
+      let json_datos = await fetch(api).then((datos) => datos.json());
+      setDatos_api(json_datos);
     })();
-  },[api])
+  }, [api])
 
   return (
     <div className="App">
       {/* Imagen como Header */}
-      <Menu/>
+      <Menu />
       <div className="container text-center">
-        {/* Buscador */}
-        <Buscador></Buscador>
-        {/* Filtros */}
-        <Filtros></Filtros>
+        {/* Añado esto para ordenar elementos y poder centrar el buscador y los filtros en la pagina */}
+        <div className="buscadoryfiltros">
+          <div className="divbuscador">
+            {/* Buscador */}
+            <Buscador></Buscador>
+          </div>
+          <div className="divfiltros">
+            {/* Filtros */}
+            <Filtros></Filtros>
+          </div>
+        </div>
+
         {/* Cards */}
-        <div className="row">
-          <Card></Card>
+        <div className="row mt-5">
+          <Card results={results}/>
         </div>
         {/* Paginar */}
         <Paginacion></Paginacion>

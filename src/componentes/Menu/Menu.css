@@ -9,6 +9,7 @@
     background-color: white;
     border-radius: 1em;
     width: 99vw;
+    box-shadow: 0 0.5rem 1rem rgb(0, 0, 0);
 }
 .Cabecera-h1{
     padding: 0.5em;
@@ -20,6 +21,10 @@
     text-decoration: none;
     color: rgb(0, 181, 209);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Cabecera-a:hover{
+    color: greenyellow;
 }
 .menu_header{
     width: 100%;

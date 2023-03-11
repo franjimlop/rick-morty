@@ -6,7 +6,7 @@ import header from '../../img/header.png';
 const Menu = () => {
     return (
         <div className='centrar'>
-            <header className="Cabecera mt-2 d-flex justify-content-arrownd">
+            <header className="Cabecera mb-4 mt-2 d-flex justify-content-arrownd">
                 <div className="text-center mt-3">
                     <img src={header} alt="Header" style={{ width: "300px", height: "auto" }}/>
                 </div>
