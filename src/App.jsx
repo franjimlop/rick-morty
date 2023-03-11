@@ -12,13 +12,14 @@ function App() {
   // API Rick & Morty
   // eslint-disable-next-line no-unused-vars
   const [numeroPagina, setNumeroPagina] = useState(1);
+  const [buscador, setBuscador] = useState("");
   const [datosApi, setDatosApi] = useState([]);
   // esto sería la destructuracion del JSON, como se vio en clase hicimos lo mismo con los objetos
   // poniendo el nombre del atributo del objeto saca su información
   // eslint-disable-next-line no-unused-vars
   const { info, results } = datosApi;
 
-  const api = `https://rickandmortyapi.com/api/character/?page=${numeroPagina}`;
+  const api = `https://rickandmortyapi.com/api/character/?page=${numeroPagina}&name=${buscador}`;
 
   // console.log('datosApi= ',datosApi.info);
   // console.log('info apti= ',results.info);
@@ -40,7 +41,7 @@ function App() {
         <div className="buscadoryfiltros">
           <div className="divbuscador">
             {/* Buscador */}
-            <Buscador />
+            <Buscador setBuscador={setBuscador} setNumeroPagina={setNumeroPagina}/>
           </div>
           <div className="divfiltros">
             {/* Filtros */}

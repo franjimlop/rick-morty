@@ -9,11 +9,10 @@ const Paginacion = ({ info, numeroPagina, setNumeroPagina }) => {
       className='pagination justify-content-center gap-3'
       previousLabel='Previa'
       nextLabel='Siguiente'
-      nextClassName='boton-personalizado-2'
-      previousClassName='boton-personalizado-2'
+      nextClassName='boton-personalizado'
+      previousClassName='boton-personalizado'
       pageClassName='page-item'
       pageLinkClassName='boton-personalizado'
-      activeClassName='active'
       forcePage={numeroPagina === 1 ? 0 : numeroPagina - 1}
       onPageChange={(datos) => { setNumeroPagina(datos.selected + 1) }}
       pageCount={info?.pages} />
