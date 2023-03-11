@@ -1,0 +1,8 @@
+.card-title{
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid rgb(200, 254, 255);
+    font-weight: bold;
+}
+.img-fluid{
+    box-shadow: 0 0 1em rgb(0, 208, 255);
+}

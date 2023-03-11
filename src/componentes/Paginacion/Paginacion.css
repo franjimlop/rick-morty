@@ -1,0 +1,29 @@
+.boton-personalizado {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(99, 121, 110, 0.659);
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 35px;
+}
+
+.boton-personalizado-2 {
+    text-decoration: none;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(99, 121, 110, 0.659);
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 35px;
+}
