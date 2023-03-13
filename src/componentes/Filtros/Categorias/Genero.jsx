@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import React from 'react'
-import BtnFiltro from '../BtnFiltro'
+import BtnFiltro from './BotonFiltro/BtnFiltro';
 import './Categorias.css'
 
 const Genero = ({ setGenero, setNumeroPagina }) => {
@@ -22,4 +22,8 @@ const Genero = ({ setGenero, setNumeroPagina }) => {
         </div>
     )
 }
+Genero.PropTypes = {
+  setGenero: PropTypes.func.isRequired,
+  setNumeroPagina: PropTypes.func.isRequired,
+};
 export default Genero

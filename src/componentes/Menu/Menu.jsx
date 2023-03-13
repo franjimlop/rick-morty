@@ -9,7 +9,7 @@ const Menu = () => {
         <div className='centrar'>
             <header className="Cabecera mb-4 mt-2 d-flex justify-content-arrownd">
                 <div className="text-center mt-3">
-                    <img src={header} alt="Header" style={{ width: "300px", height: "auto" }}/>
+                    <img src={header} alt="Header" style={{ width: "150px", height: "auto" }}/>
                 </div>
                 <div className='menu_header centrar'>
                     <h1 className="Cabecera-h1">

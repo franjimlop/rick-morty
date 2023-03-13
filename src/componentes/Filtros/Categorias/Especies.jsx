@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
-import React from 'react'
-import BtnFiltro from '../BtnFiltro'
-import './Categorias.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import BtnFiltro from './BotonFiltro/BtnFiltro';
+import './Categorias.css';
 
 const Especies = ({ setEspecies, setNumeroPagina }) => {
     let especies = ["Human", "Alien", "Humanoid", "Poopybutthole", "Mythological", "Unknown", "Animal", "Disease",  "Robot", "Cronenberg",  "Planet"]
@@ -22,4 +22,10 @@ const Especies = ({ setEspecies, setNumeroPagina }) => {
         </div>
     )
 }
+
+Especies.PropTypes = {
+  setEspecies: PropTypes.func.isRequired,
+  setNumeroPagina: PropTypes.func.isRequired,
+};
+
 export default Especies

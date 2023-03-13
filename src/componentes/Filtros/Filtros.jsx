@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import React from 'react'
 import Estado from '../Filtros/Categorias/Estado'
 import Especies from '../Filtros/Categorias/Especies'
@@ -24,5 +24,10 @@ const Filtros = ({ setEstado, setNumeroPagina, setGenero, setEspecies }) => {
     </div>
   )
 }
-
+Filtros.propTypes = {
+  setEstado: PropTypes.func.isRequired,
+  setNumeroPagina: PropTypes.func.isRequired,
+  setGenero: PropTypes.func.isRequired,
+  setEspecies: PropTypes.func.isRequired,
+};
 export default Filtros
