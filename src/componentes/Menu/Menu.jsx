@@ -13,17 +13,17 @@ const Menu = () => {
                 </div>
                 <div className='menu_header centrar'>
                     <h1 className="Cabecera-h1">
-                        <a href="#" className="Cabecera-a">
+                        <a href="." className="Cabecera-a">
                             Personajes
                         </a>
                     </h1>
                     <h1 className="Cabecera-h1">
-                        <a href="#" className="Cabecera-a">
+                        <a href="./episodios" className="Cabecera-a">
                             Episodios
                         </a>
                     </h1>
                     <h1 className="Cabecera-h1">
-                        <a href="#" className="Cabecera-a">
+                        <a href="./lugares" className="Cabecera-a">
                             Lugares
                         </a>
                     </h1>

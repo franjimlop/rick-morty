@@ -11,7 +11,7 @@ const BtnFiltro = ({ name, index, items, task, setNumeroPagina }) => {
                         task(items);
                     }}
                     className="form-check-input seleccionado" type="radio" name={name} id={`${name}-${index}`} />
-                <label className="boton-personalizado" htmlFor={`${name}-${index}`}>{items}</label>
+                <label className="boton-personalizado-filtro" htmlFor={`${name}-${index}`}>{items}</label>
             </div>
         </div>
     )

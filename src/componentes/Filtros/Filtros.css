@@ -1,4 +1,4 @@
-.boton-personalizado {
+.boton-personalizado-filtro {
     position: relative;
     display: block;
     text-decoration: none;
@@ -13,7 +13,7 @@
     border-style: solid;
     border-radius: 35px;
 }
-.boton-personalizado:hover {
+.boton-personalizado-filtro:hover {
     background-color: rgba(72, 88, 80, 0.659);
     cursor: pointer;
 }
