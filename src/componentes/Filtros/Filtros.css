@@ -1,0 +1,34 @@
+.boton-personalizado {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: greenyellow !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(99, 121, 110, 0.659);
+    border-color: greenyellow !important;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 35px;
+}
+.boton-personalizado:hover {
+    background-color: rgba(72, 88, 80, 0.659);
+    cursor: pointer;
+}
+.seleccionado:checked+label {
+    background-color: green;
+    color: greenyellow;
+}
+.seleccionado::not(:checked)+label {
+    background-color: rgba(55, 67, 61, 0.659);
+    color: white;
+}
+
+input[type="radio"] {
+    display: none;
+}
+.ponercursor {
+    cursor: pointer;
+}

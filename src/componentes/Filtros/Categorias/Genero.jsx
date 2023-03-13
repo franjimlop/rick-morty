@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import BtnFiltro from '../BtnFiltro'
+import './Categorias.css'
 
 const Genero = ({ setGenero, setNumeroPagina }) => {
     let generos = ["female", "male", "genderless", "unknown", ]
     return (
-        <div className="accordion-item">
+        <div className="my-accordion">
           <h2 className="accordion-header" id="headingThree">
             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               Genero

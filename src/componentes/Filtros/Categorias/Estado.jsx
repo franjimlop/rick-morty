@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import BtnFiltro from '../BtnFiltro'
+import './Categorias.css'
 
 const Estado = ({ setEstado, setNumeroPagina }) => {
     let estado = ["Alive", "Dead", "Unknown"]
     return (
-        <div className="accordion-item">
+        <div className="my-accordion">
           <h2 className="accordion-header" id="headingOne">
             <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Estado

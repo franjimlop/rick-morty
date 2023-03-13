@@ -1,0 +1,36 @@
+.my-accordion {
+        background-color: transparent;
+        border: 1px solid white;
+}
+.accordion-header {
+    padding: 0.5rem 1rem;
+    background-color: rgba(99, 121, 110, 0.659);
+    cursor: pointer;
+}
+
+.accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    color: white;
+    text-align: left;
+    background-color: rgba(99, 121, 110, 0.659);
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    font-weight: bold;
+}
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: rgba(99, 121, 110, 0.659);
+}
+.accordion-button:hover {
+    background-color: rgba(55, 67, 61, 0.659);
+    color: white;
+}
+.accordion-collapse {
+    background-color: rgba(99, 121, 110, 0.659);
+}
