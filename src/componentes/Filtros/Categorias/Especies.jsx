@@ -23,7 +23,7 @@ const Especies = ({ setEspecies, setNumeroPagina }) => {
     )
 }
 
-Especies.PropTypes = {
+Especies.propTypes = {
   setEspecies: PropTypes.func.isRequired,
   setNumeroPagina: PropTypes.func.isRequired,
 };

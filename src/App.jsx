@@ -7,8 +7,29 @@ import Card from './componentes/Card/Card';
 import Paginacion from './componentes/Paginacion/Paginacion';
 import Menu from './componentes/Menu/Menu';
 import './App.css';
+// eslint-disable-next-line no-unused-vars
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Episodios from './Paginas/Episodios';
+import Localizaciones from './Paginas/Localizaciones';
 
 function App() {
+  return (
+    <Router>
+        <Menu />
+      {/* se define el campo de rutas para dentro de el incorporar cada ruta con su dirección que mapea a cada element={variable}  */}
+      <Routes>
+        <Route path="/" element={<Personajes/>} />
+        <Route path="/episodios" element={<Episodios/>} />
+        <Route path="/localizaciones" element={<Localizaciones/>} />
+      </Routes>
+    </Router>
+  )
+}
+/**
+ * lo que antes teniamos de function app, se ha cambiado por const Personajes y se ha creado arriba la funcion App() con react router
+ */
+// eslint-disable-next-line no-unused-vars
+const Personajes = () => {
   // API Rick & Morty
   const [numeroPagina, setNumeroPagina] = useState(1);
   const [buscador, setBuscador] = useState("");
@@ -36,8 +57,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* Imagen como Header */}
-      <Menu />
+      {/* Imagen como Header <Menu />*/}
+      
       <div className="container text-center">
         {/* Añado esto para ordenar elementos y poder centrar el buscador
         y los filtros en la pagina */}

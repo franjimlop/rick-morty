@@ -22,8 +22,8 @@ const Estado = ({ setEstado, setNumeroPagina }) => {
         </div>
     )
 }
-Estado.PropTypes = {
-  setEspecies: PropTypes.func.isRequired,
+Estado.propTypes = {
+  setEstado: PropTypes.func.isRequired,
   setNumeroPagina: PropTypes.func.isRequired,
 };
 export default Estado
