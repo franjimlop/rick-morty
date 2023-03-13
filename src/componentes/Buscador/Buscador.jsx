@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Buscador = ({setBuscador, setNumeroPagina}) => {
   return (
-    <form className='mb-5'>
+    <form className='mb-3'>
       <input onChange={e=>{
         setNumeroPagina(1);
         setBuscador(e.target.value);
