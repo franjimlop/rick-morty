@@ -1,0 +1,19 @@
+.vivo{
+    background-color: green;
+}
+.muerto{
+    background-color: red;
+}
+.desconocido{
+    background-color: grey;
+}
+.estado{
+    border: solid rgb(255, 255, 255) 1px;
+    width: 100%;
+    color:white;
+    font-weight: bold;
+    border-radius: 0.5em;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
