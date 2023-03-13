@@ -44,7 +44,7 @@ const Episodios = () => {
             <div>
                 <h5 className="text-center mb-3">Personajes que aparecen en el episodio:</h5>
                 <div className="row">
-                    <Card results={results}></Card>
+                    <Card page="/episodios/" results={results}></Card>
                 </div>
             </div>
         </div>
