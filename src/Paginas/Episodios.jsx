@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Card from "../componentes/Card/Card";
-import SeleccionarEpisodio from "../componentes/Filtros/Categorias/SeleccionarEpisodio";
+import SeleccionarEpisodio from "./SeleccionarEpisodio";
 import PropTypes from "prop-types";
+import './EpiLug.css';
 
 const Episodios = () => {
     const [id, setID] = useState(1);
@@ -28,21 +29,21 @@ const Episodios = () => {
     }, [api]);
 
     return (
-        <div className="container">
+        <div className="container letra-parteSup">
             <div>
                 <h3 className="text-center mb-3">Escoger episodios</h3>
                 <SeleccionarEpisodio setID={setID} name="Episodio " total={41} />
             </div>
             <div className="row">
                 <h1 className="text-center mb-3">
-                    Nombre del episodio: {episodio.name}
+                    Nombre del episodio: <span className="letra-rick">{episodio.name}</span>
                 </h1>
                 <h4 className="text-center mb-5">
                     Fecha de estreno: {episodio.air_date}
                 </h4>
             </div>
             <div>
-                <h5 className="text-center mb-3">Personajes que aparecen en el episodio:</h5>
+                <h5 className="text-center mb-3 letra-parteSup">Personajes que aparecen en el episodio:</h5>
                 <div className="row">
                     <Card results={results}></Card>
                 </div>

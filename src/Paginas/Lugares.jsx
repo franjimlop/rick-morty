@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Card from "../componentes/Card/Card";
-import SeleccionarEpisodio from "../componentes/Filtros/Categorias/SeleccionarEpisodio";
+import SeleccionarEpisodio from "./SeleccionarEpisodio";
 import PropTypes from "prop-types";
+import './EpiLug.css';
 
 const Lugares = () => {
     const [id, setID] = useState(1);
@@ -31,14 +32,14 @@ const Lugares = () => {
     }, [api]);
 
     return (
-        <div className="container">
+        <div className="container letra-parteSup">
             <div>
                 <h3 className="text-center mb-3">Escoger lugar</h3>
                 <SeleccionarEpisodio setID={setID} name="Lugar " total={126} />
             </div>
             <div className="row">
                 <h1 className="text-center mb-3">
-                    Lugar: {episodio.name}
+                    Lugar: <span className="letra-rick">{episodio.name}</span>
                 </h1>
                 <h5 className="text-center mb-3">
                     Dimensión: {episodio.dimension}
@@ -49,7 +50,7 @@ const Lugares = () => {
 
             </div>
             <div>
-                <h5 className="text-center">Personajes que habitan en la localización:</h5>
+                <h5 className="text-center letra-parteSup">Personajes que habitan en la localización:</h5>
                 <div className="row">
                     <Card results={results}></Card>
                 </div>

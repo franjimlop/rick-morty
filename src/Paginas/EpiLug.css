@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('../tipografia/get_schwifty.ttf');
+}
+
+.letra-parteSup {
+    color: #cddb47;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.letra-rick {
+    font-family: 'Get Schwifty', sans-serif;
+    color: rgba(20,173,201,255);
+    text-shadow: 1px 1px 0 #cddb47, -1px -1px 0 #cddb47, 1px -1px 0 #cddb47, -1px 1px 0 #cddb47;
+}
