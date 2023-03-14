@@ -22,7 +22,7 @@ const Genero = ({ setGenero, setNumeroPagina }) => {
         </div>
     )
 }
-Genero.PropTypes = {
+Genero.propTypes = {
   setGenero: PropTypes.func.isRequired,
   setNumeroPagina: PropTypes.func.isRequired,
 };
