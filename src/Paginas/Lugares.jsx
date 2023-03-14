@@ -2,14 +2,20 @@ import React, { useState, useEffect } from "react";
 import Card from "../componentes/Card/Card";
 import SeleccionarEpisodio from "./SeleccionarEpisodio";
 import PropTypes from "prop-types";
+import { useParams } from "react-router-dom"
 import './EpiLug.css';
 
 const Lugares = () => {
-    const [id, setID] = useState(1);
+    let {id} = useParams()==="lugares"?1:useParams();
+    // if(id==="lugares") id=1;
+    const [idhook, setID] = useState(id);
+    if(idhook===undefined){
+        setID(1)
+    }
     const [episodio, setEpisodio] = useState({ name: "", type: "", dimension: "" });
     const [results, setResults] = useState([]);
-    let api = `https://rickandmortyapi.com/api/location/${id}`;
-    console.log(results);
+    let api = `https://rickandmortyapi.com/api/location/${idhook}`;
+    // console.log("parametro ",id ,"     tratado ",idhook);
 
     useEffect(() => {
         async function fetchData() {
@@ -52,7 +58,7 @@ const Lugares = () => {
             <div>
                 <h5 className="text-center letra-parteSup">Personajes que habitan en la localización:</h5>
                 <div className="row">
-                    <Card page="/lugares/" results={results}></Card>
+                    <Card pagina="/lugares/" results={results}></Card>
                 </div>
             </div>
         </div>

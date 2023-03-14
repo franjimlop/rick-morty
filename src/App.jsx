@@ -4,7 +4,6 @@ import 'bootstrap/dist/js/bootstrap';
 import Buscador from './componentes/Buscador/Buscador';
 import Filtros from './componentes/Filtros/Filtros';
 import Card from './componentes/Card/Card';
-import CardDetallado from './componentes/Card/CardDetallado';
 import Paginacion from './componentes/Paginacion/Paginacion';
 import Menu from './componentes/Menu/Menu';
 import './App.css';
@@ -12,6 +11,7 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Episodios from './Paginas/Episodios';
 import Localizaciones from './Paginas/Lugares';
+import InfoPersonaje from './componentes/Card/Individual/InfoPersonaje';
 
 function App() {
   return (
@@ -20,13 +20,15 @@ function App() {
       {/* se define el campo de rutas para dentro de el incorporar cada ruta con su dirección que mapea a cada element={variable}  */}
       <Routes>
         <Route path="/" element={<Personajes/>} />
-        <Route path="/:id" element={<CardDetallado/>} />
+        <Route path="/:id" element={<InfoPersonaje/>} />
 
         <Route path="/episodios" element={<Episodios/>} />
-        <Route path="/episodios/:id" element={<CardDetallado/>} />
+        {/* <Route path="/episodios/:id" element={<InfoPersonaje/>} /> */}
+        <Route path="/episodios/:id" element={<Episodios/>} />
+
 
         <Route path="/lugares" element={<Localizaciones/>} />
-        <Route path="/lugares/:id" element={<CardDetallado/>} />
+        <Route path="/lugares/:id" element={<Localizaciones />} />
       </Routes>
     </Router>
   )
@@ -54,7 +56,6 @@ const Personajes = () => {
   // console.log('datosApi= ',datosApi.info);
   // console.log('info apti= ',results.info);
   useEffect(() => {
-    // se crea la funcion asincrona de AJAX, pero ¿porqué los parentesis que envuelve la funcion?
     (async function () {
       const json_datos = await fetch(api).then((datos) => datos.json());
       setDatosApi(json_datos);
@@ -82,7 +83,7 @@ const Personajes = () => {
 
         {/* Cards */}
         <div className="row mt-5">
-          <Card page="/" results={results} />
+          <Card pagina="" results={results} />
         </div>
         {/* Paginar */}
         <Paginacion info={info} numeroPagina={numeroPagina} setNumeroPagina={setNumeroPagina}/>
