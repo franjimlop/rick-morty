@@ -5,8 +5,11 @@ import PropTypes from "prop-types";
 import { useParams } from "react-router-dom"
 
 const Episodios = () => {
-    let {id} = useParams()==="lugares"?1:useParams();
+    let {id} = useParams()==="episodios"?1:useParams()===null?1:useParams();
     const [idhook, setID] = useState(id);
+    if(idhook===undefined){
+        setID(1)
+    }
     const [episodio, setEpisodio] = useState({name: "", air_date: ""});
     const [results, setResults] = useState([]);
     const api = `https://rickandmortyapi.com/api/episode/${idhook}`;

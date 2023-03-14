@@ -91,6 +91,9 @@ function InfoPersonaje() {
               <p className="card-text">
               <select onChange={e => window.location.href=`/episodios/${e.target.value}`} className="form-select" id="sleccionEpsiodio">
                  
+                <option key={idepisodio} value={idepisodio}>
+                            Episodios en los que aparece
+                  </option>
                 {episodios.map((x) => {
                     let buscarepisodio = x.split('/');
                     idepisodio = buscarepisodio.slice(-1);
@@ -99,11 +102,8 @@ function InfoPersonaje() {
                     // let buscarepisodio = 1;
                     // let idepisodio = 1;
                     return (
-                        <option key={idepisodio} value={idepisodio} href={`/episodios/${idepisodio}`}>
-                          
-                            {/* {console.log("episode  ",SELECCION)} */}
-                           {/* onSelect={window.location.href=`/episodios/${idepisodio}`} */}
-                            <a  href={`/episodios/${idepisodio}`}>Episodio - {idepisodio}</a> 
+                        <option key={idepisodio} value={idepisodio}>
+                            Episodio - {idepisodio}
                         </option>
                     );
                   })

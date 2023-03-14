@@ -7,6 +7,9 @@ const Lugares = () => {
     let {id} = useParams()==="lugares"?1:useParams();
     // if(id==="lugares") id=1;
     const [idhook, setID] = useState(id);
+    if(idhook===undefined){
+        setID(1)
+    }
     const [episodio, setEpisodio] = useState({ name: "", type: "", dimension: "" });
     const [results, setResults] = useState([]);
     let api = `https://rickandmortyapi.com/api/location/${idhook}`;

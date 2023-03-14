@@ -5,12 +5,32 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 
-const Card = ({results, pagina}) => {
+// const Card = ({results, pagina}) => {
+//   let mostrar;
+//   if(results){
+//     mostrar = results.map((personaje)=>{
+//        return(
+//         <Link to={`${pagina}/${personaje.id}`} key={personaje.id} className="col-3">
+//           <Personaje objeto={personaje} />
+//         </Link>
+//        );
+//     })
+//   }else{
+//     mostrar = "no se ha obtenido resultados";
+//   }
+//   return (
+//     //Contenido del Card
+//     //4 Card por línea
+//     <>{mostrar}</>
+//   )
+// }
+
+const Card = ({results}) => {
   let mostrar;
   if(results){
     mostrar = results.map((personaje)=>{
        return(
-        <Link to={`${pagina}/${personaje.id}`} key={personaje.id} className="col-3">
+        <Link to={`/${personaje.id}`} key={personaje.id} className="col-3">
           <Personaje objeto={personaje} />
         </Link>
        );
