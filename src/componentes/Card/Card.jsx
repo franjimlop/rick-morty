@@ -2,15 +2,16 @@ import React from 'react';
 import './Card.css';
 import Personaje from './Personaje/Personaje';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const Card = ({results}) => {
+const Card = ({results, page}) => {
   let mostrar;
   if(results){
     mostrar = results.map((personaje)=>{
        return(
-        <div key={personaje.id} className="col-3">
+        <Link to={`${page}${personaje.id}`} key={personaje.id} className="col-3">
           <Personaje objeto={personaje} />
-        </div>
+        </Link>
        );
     })
   }else{
@@ -26,6 +27,7 @@ const Card = ({results}) => {
 // Definimos los tipos de datos de las props
 Card.propTypes = {
   results: PropTypes.object.isRequired,
+  page: PropTypes.string.isRequired,
 };
 // valor por defecto de la prop no es obligatorio con el required
 export default Card;

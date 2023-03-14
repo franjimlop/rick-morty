@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap';
 import Buscador from './componentes/Buscador/Buscador';
 import Filtros from './componentes/Filtros/Filtros';
 import Card from './componentes/Card/Card';
+import CardDetallado from './componentes/Card/CardDetallado';
 import Paginacion from './componentes/Paginacion/Paginacion';
 import Menu from './componentes/Menu/Menu';
 import './App.css';
@@ -19,8 +20,13 @@ function App() {
       {/* se define el campo de rutas para dentro de el incorporar cada ruta con su dirección que mapea a cada element={variable}  */}
       <Routes>
         <Route path="/" element={<Personajes/>} />
+        <Route path="/:id" element={<CardDetallado/>} />
+
         <Route path="/episodios" element={<Episodios/>} />
+        <Route path="/episodios/:id" element={<CardDetallado/>} />
+
         <Route path="/lugares" element={<Localizaciones/>} />
+        <Route path="/lugares/:id" element={<CardDetallado/>} />
       </Routes>
     </Router>
   )
@@ -76,7 +82,7 @@ const Personajes = () => {
 
         {/* Cards */}
         <div className="row mt-5">
-          <Card results={results} />
+          <Card page="/" results={results} />
         </div>
         {/* Paginar */}
         <Paginacion info={info} numeroPagina={numeroPagina} setNumeroPagina={setNumeroPagina}/>

@@ -52,7 +52,7 @@ const Lugares = () => {
             <div>
                 <h5 className="text-center letra-parteSup">Personajes que habitan en la localización:</h5>
                 <div className="row">
-                    <Card results={results}></Card>
+                    <Card page="/lugares/" results={results}></Card>
                 </div>
             </div>
         </div>
