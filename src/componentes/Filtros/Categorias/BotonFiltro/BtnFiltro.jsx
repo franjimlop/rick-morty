@@ -19,8 +19,8 @@ const BtnFiltro = ({ name, index, items, task, setNumeroPagina }) => {
 BtnFiltro.propTypes = {
     name: PropTypes.string.isRequired,
     index: PropTypes.number.isRequired,
-    items: PropTypes.func.isRequired,
+    items: PropTypes.string.isRequired,
     task: PropTypes.func.isRequired,
-    setNumeroPagina: PropTypes.number.isRequired,
+    setNumeroPagina: PropTypes.func.isRequired,
 };
 export default BtnFiltro

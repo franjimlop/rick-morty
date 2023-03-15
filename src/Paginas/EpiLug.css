@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('../tipografia/get_schwifty.ttf');
+}
+
+.letra-parteSup {
+    color: #cddb47;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.letra-rick {
+    font-family: 'Get Schwifty', sans-serif;
+    color: rgba(20, 173, 201, 255);
+    text-shadow: 1px 1px 0 #cddb47, -1px -1px 0 #cddb47, 1px -1px 0 #cddb47, -1px 1px 0 #cddb47;
+}
+
+.form-select {
+    background-color: rgba(99, 121, 110, 0.659);
+    color: white;
+}
+
+option {
+    background-color: black;
+    color: white;
+    /*border: 1px solid white;*/
+}
+
+option:checked {
+    background-color: green;
+}

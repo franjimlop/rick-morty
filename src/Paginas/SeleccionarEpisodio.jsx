@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import './EpiLug.css';
 
 const SeleccionarEpisodio = ({ total, name, setID }) => {
     return (
