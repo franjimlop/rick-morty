@@ -2,13 +2,20 @@ import React, { useState, useEffect } from "react";
 import Card from "../componentes/Card/Card";
 import SeleccionarEpisodio from "./SeleccionarEpisodio";
 import PropTypes from "prop-types";
+import { useParams } from "react-router-dom"
+import './EpiLug.css';
 
 const Lugares = () => {
-    const [id, setID] = useState(1);
+    let {id} = useParams()==="lugares"?1:useParams();
+    // if(id==="lugares") id=1;
+    const [idhook, setID] = useState(id);
+    if(idhook===undefined){
+        setID(1)
+    }
     const [episodio, setEpisodio] = useState({ name: "", type: "", dimension: "" });
     const [results, setResults] = useState([]);
-    let api = `https://rickandmortyapi.com/api/location/${id}`;
-    console.log(results);
+    let api = `https://rickandmortyapi.com/api/location/${idhook}`;
+    // console.log("parametro ",id ,"     tratado ",idhook);
 
     useEffect(() => {
         async function fetchData() {
@@ -31,14 +38,14 @@ const Lugares = () => {
     }, [api]);
 
     return (
-        <div className="container">
+        <div className="container letra-parteSup">
             <div>
                 <h3 className="text-center mb-3">Escoger lugar</h3>
                 <SeleccionarEpisodio setID={setID} name="Lugar " total={126} />
             </div>
             <div className="row">
                 <h1 className="text-center mb-3">
-                    Lugar: {episodio.name}
+                    Lugar: <span className="letra-rick">{episodio.name}</span>
                 </h1>
                 <h5 className="text-center mb-3">
                     Dimensión: {episodio.dimension}
@@ -49,9 +56,9 @@ const Lugares = () => {
 
             </div>
             <div>
-                <h5 className="text-center">Personajes que habitan en la localización:</h5>
+                <h5 className="text-center letra-parteSup">Personajes que habitan en la localización:</h5>
                 <div className="row">
-                    <Card results={results}></Card>
+                    <Card pagina="/lugares/" results={results}></Card>
                 </div>
             </div>
         </div>

@@ -18,12 +18,12 @@ const Menu = () => {
                         </a>
                     </h1>
                     <h1 className="Cabecera-h1">
-                        <a href="./episodios" className="Cabecera-a">
+                        <a href="/episodios" className="Cabecera-a">
                             Episodios
                         </a>
                     </h1>
                     <h1 className="Cabecera-h1">
-                        <a href="./lugares" className="Cabecera-a">
+                        <a href="/lugares" className="Cabecera-a">
                             Lugares
                         </a>
                     </h1>
