@@ -1,17 +1,24 @@
 ::placeholder { color: rgb(206, 206, 206); }
-input {
+.buscador--input {
     width: 40%;
     border-radius: 8px;
-    border: 2px solid rgba(99, 121, 110, 0.659);
+    border: 2px solid white;
     background-color: rgba(99, 121, 110, 0.659);
     color: white;
     padding: 10px 15px;
     font-weight: bold;
 }
-input:focus {
+.buscador--input:focus{
     outline: none;
+    box-shadow: 0.5em 0.5em 1em yellowgreen;
+    color: rgb(255, 255, 255);
+    background-color: rgba(153, 205, 50, 0.288);
 }
-.boton-personalizado-buscador {
+.buscador--input:hover{
+    box-shadow: 0.5em 0.5em 1em yellowgreen;
+}
+
+.boton--personalizado__buscador {
     text-decoration: none;
     color: white;
     padding-top: 6px;
@@ -27,6 +34,9 @@ input:focus {
     font-weight: bold;
     margin-left: 40px;
 }
-.boton-personalizado-buscador:hover {
-    background-color: rgba(72, 88, 80, 0.659);
+.boton--personalizado__buscador:hover , .boton--personalizado__buscador:active{
+    background-color: rgba(153, 205, 50, 0.288);
+    border: solid white 0.1em;
+    box-shadow: 0.5em 0.5em 1em yellowgreen;
+    color: rgb(255, 255, 255);
 }
